@@ -1,28 +1,35 @@
-# aoc_template.py
+# 2021 Day X
+# Puzzle at: X
+'''
+    Part 1:
+    X
+    
+    Part 2:
+    X
+'''
+#---------------------------------------------------------------------------
+# AOC framework & test setup
+from aocd.models import Puzzle
+puzzle = Puzzle(year=2021, day=X)
 
-import pathlib
-import sys
+def print_test_results(day, part, expected, function_call):
+    answer = function_call()
+    if answer == expected:
+        print('Day ' + str(day) + '.'+ str(part) + ' Result = **Pass**: answer "' + str(answer) + '" returned from ' + function_call.__name__)
+    else:
+        print('Day ' + str(day) + '.'+ str(part) + ' Result = **Fail** (expected "' + str(expected) + '): answer "' + str(answer) + '" returned from ' + function_call.__name__)
 
-def parse(puzzle_input):
-    """Parse input"""
+    
+#---------------------------------------------------------------------------
 
-def part1(data):
-    """Solve part 1"""
+# Begin solution #######################
+X = puzzle.input_data.split('\n')
 
-def part2(data):
-    """Solve part 2"""
 
-def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
-    solution1 = part1(data)
-    solution2 = part2(data)
 
-    return solution1, solution2
-
-if __name__ == "__main__":
-    for path in sys.argv[1:]:
-        print(f"{path}:")
-        puzzle_input = pathlib.Path(path).read_text().strip()
-        solutions = solve(puzzle_input)
-        print("\n".join(str(solution) for solution in solutions))
+if __name__ == '__main__':
+    print('T E S T  R E S U L T S')
+    print('-----------------------------------------')
+    print_test_results(1, 1, EXPECTEDRESULT, FUNCTIONTORUN)
+    print_test_results(1, 2, EXPECTEDRESULT, FUNCTIONTORUN)
+    
