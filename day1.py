@@ -53,9 +53,3 @@ def sliding_depth_increase_count():
             depth_increase_count += 1
     return depth_increase_count
 
-if __name__ == '__main__':
-    print('T E S T  R E S U L T S')
-    print('-----------------------------------------')
-    print_test_results(1, 1, 1466, find_depth_increase_count)
-    print_test_results(1, 2,  1491,sliding_depth_increase_count)
-    
