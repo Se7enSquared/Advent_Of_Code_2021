@@ -1,5 +1,5 @@
 # 2021 Day X
-# Puzzle at: X
+# Puzzle at: https://adventofcode.com/2021/day/X
 '''
     Part 1:
     X
