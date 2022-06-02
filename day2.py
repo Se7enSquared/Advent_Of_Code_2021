@@ -51,10 +51,10 @@ def plot_course():
 
     for instruction in planned_course:
         direction, amount = instruction.split(' ')[0], int(instruction.split(' ')[1])
-        
+
         if direction == 'forward':
             longitudinal_pos = move_forward(longitudinal_pos, amount)
-            
+
         else:
             if direction == 'up':
                 amount = -amount
@@ -68,10 +68,10 @@ def plot_course_with_aim():
 
     for instruction in planned_course:
         direction, amount = instruction.split(' ')[0], int(instruction.split(' ')[1])
-        
+
         if direction == 'forward':
             longitudinal_pos, latitudinal_pos = move_forward_with_aim(longitudinal_pos, latitudinal_pos, aim_pos, amount)
-            
+
         else:
             if direction == 'up':
                 amount = -amount

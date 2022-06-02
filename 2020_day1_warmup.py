@@ -25,37 +25,28 @@ TARGET_SUM = 2020
 
 def get_product(permutations):
     
-    combos = [combo for combo in combinations(expense_report, permutations)]
+    combos = list(combinations(expense_report, permutations))
     product = 1
-    
+
     for combo in combos:
-        combo_sum = 0
-        
-        for number in combo:
-            combo_sum += int(number)
-        
+        combo_sum = sum(int(number) for number in combo)
+
         if combo_sum == TARGET_SUM:
             for number in combo:
                 product *= int(number)
-    
+
     return product
 
 if __name__ == '__main__':
     answer_day1pt1 = 157059
     answer_day1pt2 = 165080960
-    
-    test_day1pt1 = 'Fail'
-    test_day1pt2 = 'Fail'
-    
+
     pt1_answer = get_product(2)
     pt2_answer = get_product(3)
-    
-    if pt1_answer == answer_day1pt1:
-        test_day1pt1 = 'Pass'
-    if pt2_answer == answer_day1pt2:
-        test_day1pt2 = 'Pass' 
-    
+
+    test_day1pt1 = 'Pass' if pt1_answer == answer_day1pt1 else 'Fail'
+    test_day1pt2 = 'Pass' if pt2_answer == answer_day1pt2 else 'Fail'
     print('T E S T  R E S U L T S')
     print('-----------------------------------------')
-    print('Day 1 Part 1: ' + test_day1pt1 + ' with answer: ' + str(pt1_answer))
-    print('Day 1 Part 2: ' + test_day1pt2 + ' with answer: ' + str(pt2_answer))
+    print(f'Day 1 Part 1: {test_day1pt1} with answer: {str(pt1_answer)}')
+    print(f'Day 1 Part 2: {test_day1pt2} with answer: {str(pt2_answer)}')
