@@ -5,9 +5,24 @@ from day2 import plot_course, plot_course_with_aim
 def print_test_results(day, part, expected, function_call):
     answer = function_call()
     if answer == expected:
-        print('Day ' + str(day) + '.'+ str(part) + ' Result = **Pass**: answer "' + str(answer) + '" returned from ' + function_call.__name__)
+        print(
+            f'Day {str(day)}.{str(part)}'
+            + ' Result = **Pass**: answer "'
+            + str(answer)
+            + '" returned from '
+            + function_call.__name__
+        )
+
     else:
-        print('Day ' + str(day) + '.'+ str(part) + ' Result = **Fail** (expected "' + str(expected) + '): answer "' + str(answer) + '" returned from ' + function_call.__name__)
+        print(
+            f'Day {str(day)}.{str(part)}'
+            + ' Result = **Fail** (expected "'
+            + str(expected)
+            + '): answer "'
+            + str(answer)
+            + '" returned from '
+            + function_call.__name__
+        )
 
 if __name__ == '__main__':
     print('T E S T  R E S U L T S')
